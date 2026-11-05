@@ -42,7 +42,7 @@ opti.set_initial(w, w_g)
 opti.subject_to(opti.bounded(-13.0, a, 13.0))
 opti.subject_to(opti.bounded(-2, w, 2))
 
-opti.solver('ipopt', {"expand": True}, {"print_level": 0})
+opti.solver('ipopt')
 sol = opti.solve()
 
 print(f"\n\nActive segment found : {w1} -> {w2}\n")
